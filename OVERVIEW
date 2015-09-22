@@ -1,0 +1,43 @@
+overview-interactive/
+    this is a small library built to support displaying your
+    project intuitively. It's built to run perfectly with
+    [overview-tools](http://github.com/atstp/overview-tools)
+
+overview-interactive/.gitignore
+overview-interactive/OVERVIEW
+    the overveiw of the project's structure, either the source for
+    what you're looking at, or the file itself
+
+overview-interactive/bundle.js
+    _not included in a `git clone`_
+
+    this is what you get if you `npm run bundle`
+    (it's also available by default in the npm install)
+
+overview-interactive/package.json
+overview-interactive/lib/
+    a mirror image of `overview-interactive/src/`, but the stuff here
+    is compiled ES5, courtesy of [`babel`](http://babeljs.io/)
+
+overview-interactive/src/
+    ES2015 Woot! it uses _babel_ and _browserify_ to make you
+    a nice little package.
+
+overview-interactive/src/Entry.js
+    Each entry -- a file, it's path, comments, and children -- is used
+    as the argument to the `Entry` class' constructor. They make things
+    easier to work with.
+
+overview-interactive/src/Project.js
+    the wrapper for displaying things. It splits comments out separately,
+    builds the box it lives in, and handles inserting it into the document
+
+overview-interactive/src/overview-to-json.js
+    this module is a single function: it converts the source-text from an
+    overview file to a JSON tree-like object representing the directory
+    structure.
+
+overview-interactive/src/browser.js
+    Attaches the project, `Project` to the window as a factory function
+    (called **`overview`**) handling function signatures and eventually
+    delagating to the `Project` class.

@@ -1,0 +1,25 @@
+{
+  "name": "overview-interactive",
+  "version": "1.0.0",
+  "description": "fetch and display a spruced-up overview file in your browser",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha --compilers js:babel/register",
+    "bundle": "./node_modules/.bin/browserify src/browser.js -t babelify | ./node_modules/.bin/uglifyjs - > bundle.js",
+    "build": "./node_modules/babel/bin/babel.js --optional runtime src/ --out-dir lib",
+    "prepublish": "npm run build; npm run bundle"
+  },
+  "author": "Daniel Montague <dan.mntg@gmail.com> (http://danielmontague.com)",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-runtime": "^5.8.24",
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "markdown": "^0.5.0",
+    "uglify-js": "^2.4.24"
+  },
+  "dependencies": {
+    "babel-core": "^5.8.25"
+  },
+  "license": "ISC"
+}
