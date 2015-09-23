@@ -23,3 +23,7 @@ minimal example
         overview(overviewFileURL, proj => proj.into('#demo-here'));
       </script>
 
+> gets you this
+>
+> ![gets you this](https://gist.githubusercontent.com/atstp/0a0c7c1a0eeb9ba7d578/raw/50a36500041c34d6bde022d436e6340e76f7d32d/interactive.gif)
+
