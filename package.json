@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "fetch and display a spruced-up overview file in your browser",
   "main": "bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atstp/overview-interactive"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha --compilers js:babel/register",
     "bundle": "./node_modules/.bin/browserify src/browser.js -t babelify | ./node_modules/.bin/uglifyjs - > bundle.js",
